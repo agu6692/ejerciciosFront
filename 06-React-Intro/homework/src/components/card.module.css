@@ -1,0 +1,26 @@
+.info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedor{
+    border: solid 1px rgb(163, 162, 162) ;
+    border-radius: 8px;
+    width: 20%;
+    
+    
+}
+.btn{
+    margin: 15px;
+    height: min-content;
+    border: none;
+    background-color: rgb(211, 49, 49);
+    border-radius: 5px;
+    color: aliceblue;
+    transition: all 0.3s;
+    
+    
+}
+.btn:hover{
+    background-color: rgb(141, 9, 9);
+}

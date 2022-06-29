@@ -1,0 +1,12 @@
+.btn{
+    
+    border-color: rgb(32, 197, 142);
+    border-radius: 5px;
+    background-color: aquamarine;
+    color: black;
+    margin: 20px;
+}
+.contenedor{
+    background-color: rgb(221, 221, 221);
+   
+}
