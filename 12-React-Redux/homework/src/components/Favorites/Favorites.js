@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 // import { Link } from 'react-router-dom';
 import './Favorites.css';
+import {  removeMovieFavorite } from "../../actions";
 
 export class ConnectedList extends Component {
 
@@ -11,6 +12,8 @@ export class ConnectedList extends Component {
         <h2>Películas Favoritas</h2>
         <ul>
           {/* Aqui deberias poner tu lista de peliculas! */}
+          {this.props.favs.map(movie=> <li key={movie.imdbID}>{movie.Title}
+          <button onClick={()=>this.props.removeMovieFavorite(movie.imdbID)} >Remove</button></li>)}
         </ul>
       </div>
     );
@@ -19,4 +22,4 @@ export class ConnectedList extends Component {
 
 
 
-export default (ConnectedList);
+export default connect((state)=>({favs: state.moviesFavourites}),{removeMovieFavorite}) (ConnectedList);
